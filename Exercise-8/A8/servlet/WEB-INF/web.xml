@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-name>country</servlet-name>
+		<servlet-class>AjaxCountryList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>country</servlet-name>
+		<url-pattern>/AjaxCountryList</url-pattern>
+	</servlet-mapping>
+
+</web-app>

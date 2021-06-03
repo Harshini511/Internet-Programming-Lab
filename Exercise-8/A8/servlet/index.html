@@ -1,0 +1,48 @@
+<!doctype html>
+<html>  
+<head>  
+<script>  
+var request;  
+function sendInfo(value)  
+{  
+/*var v=document.myform.t1.value;  */
+var url="AjaxCountryList?val="+value;  
+  
+if(window.XMLHttpRequest){  
+request=new XMLHttpRequest();  
+}  
+else if(window.ActiveXObject){  
+request=new ActiveXObject("Microsoft.XMLHTTP");  
+}  
+  
+try  
+{  
+request.onreadystatechange=getInfo;  
+request.open("GET",url,true);  
+request.send();  
+}  
+catch(e)  
+{  
+alert("Unable to connect to server");  
+}  
+}  
+  
+function getInfo(){  
+if(request.readyState==4){  
+var val=request.responseText;  
+document.getElementById('myspan').innerHTML=val;  
+}  
+}  
+  
+</script>  
+</head>  
+<body>  
+<form name="myform">  
+<b>Country</b>   :<br>
+<input list="listc" type="text" id="country" name="country" onkeyup="sendInfo(this.value);" />
+</form>  
+  
+<span id="myspan"> </span>  
+  
+</body>  
+</html>  
