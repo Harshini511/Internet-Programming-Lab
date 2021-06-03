@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>registration</title>
+<style>
+label:hover ,input:hover
+{
+background-color:lightgrey;
+}
+body
+{
+text-align: center;
+}
+h1
+{
+  text-align:center;
+}
+span
+{
+  color:red;
+}
+</style>
+<script>
+function myFunction() 
+{
+	alert("Registered successfully!");
+	return true;
+}
+
+function na()
+{
+//radio button salutation
+var radios = document.getElementsByName("salutation");
+var formValid = false;
+var i = 0;
+while (!formValid && i < radios.length) 
+{
+	if (radios[i].checked) 
+		formValid = true;
+	i++;        
+}
+if (!formValid) 
+  document.getElementById("n").innerHTML="Fill out the previous fields first";
+}
+
+function usr()
+{
+	//name
+  document.getElementById("n").innerHTML="";
+	var x = document.getElementById("fname").value;
+    var regex=/^[A-Z]\s[a-zA-Z]+\s?[a-zA-Z]*$/;
+    if(x=="")
+    	document.getElementById("u").innerHTML="Fill out the previous fields first";
+	else if(regex.test(x) == false)
+	  document.getElementById("n").innerHTML="Wrong format of name";
+}
+
+function password()
+{
+//username
+document.getElementById("u").innerHTML="";
+var x = document.getElementById("user").value;
+var regex=/^[A-Za-z]*$/;
+if(x=="")
+    	document.getElementById("p").innerHTML="Fill out the previous fields first";
+	else if(regex.test(x) == false)
+	  document.getElementById("u").innerHTML="Wrong format of username";
+}
+
+function email()
+{
+document.getElementById("p").innerHTML="";
+//password
+var x = document.getElementById("pw").value;
+var regex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+if(x=="")
+    	document.getElementById("e").innerHTML="Fill out the previous fields first";
+else if(regex.test(x) == false)
+	  document.getElementById("p").innerHTML="Wrong format of password";
+}
+
+
+function dt_b()
+{
+//email
+document.getElementById("e").innerHTML="";
+var x = document.getElementById("em").value;
+var regex=/^.+@.+\.(org|net|com|in)$/;
+if(x=="")
+    	document.getElementById("birth").innerHTML="Fill out the previous fields first";
+else if(regex.test(x) == false)
+	  document.getElementById("e").innerHTML="Wrong format of email ID";
+}
+
+function sel_img()
+{
+//dob
+document.getElementById("birth").innerHTML="";
+var dob = new Date(document.getElementById("dob").value); 
+var yr = new Date(Date.now());
+var diff=yr.getFullYear()-dob.getFullYear();
+if( diff<18 || diff>35 )
+	{
+	document.getElementById("birth").innerHTML="Age should be between 18 and 35";
+	}
+}
+
+
+</script>
+</head>
+<body>
+<h1>REGISTER HERE!</h2>
+<h3>
+
+<form align="center" name="myForm" onsubmit="return myFunction()" action="TestServleta" method="get">
+<label for="rad">Salutation:</label>
+  <input type="radio" id="a" name="salutation" value="Mr.">
+  <label for="Mr.">Mr.</label>
+  <input type="radio" id="b" name="salutation" value="Miss.">
+  <label for="Miss.">Miss.</label>
+  <input type="radio" id="c" name="salutation" value="Mrs.">
+  <label for="Mrs.">Mrs.</label>
+  <input type="radio" id="d" name="salutation" value="Dr.">
+  <label for="Dr.">Dr.</label><span id="sal"></span><br><br>	
+  
+    
+  <label for="fname">Name:</label>
+  <input type="text" id="fname" name="fname" onfocus="na()" placeholder="Type" required><br><span id="n"></span><br><br>
+
+  <label for="user">UserName:</label>
+  <input list="usernames" id="user" name="user" placeholder="Type" onfocus="usr()" required> <br><span id="u"></span> <br><br>
+  <datalist id="usernames">
+    <option value="Archana">
+    <option value="Harshini">
+    <option value="Bargavi">
+  </datalist>
+  
+  <label for="pw">Password:</label>
+  <input type="password" id="pw" placeholder="Type" onfocus="password()" required><br><span id="p"></span><br><br>
+  
+  <label for="em">Email:</label>
+  <input type="email" id="em" name="em" placeholder="Type" onfocus="email()" required><br><span id="e"></span><br><br>
+  
+  <label for="dob">Date Of Birth:</label>
+  <input type="date" id="dob" name="dob" onfocus="dt_b()" required><br><span id="birth"><br></span><br><br>
+
+  <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*" onfocus="sel_img()" required><br><span id="i"></span><br><br>
+
+ <label for="exp"><br><br><br>Additional Expertise:</label>
+<textarea id="exp" name="exp" rows="5" cols="70" required></textarea><br><br>
+
+
+ <input type="submit" value="Register">&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Clear">
+
+ 
+</form> 
+</h3>
+</div>
+</body>
+</html>
+
+</body>
