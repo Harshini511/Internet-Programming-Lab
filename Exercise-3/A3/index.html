@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>registration</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js">
+</script>
+</head>
+<body>
+<h1>REGISTER HERE!</h2>
+<h3>
+
+<form align="center" name="myForm" onsubmit="return myFunction()" method="post">
+
+<label for="rad">Salutation:</label>
+  <input type="radio" id="a" name="salutation" value="Mr.">
+  <label for="Mr.">Mr.</label>
+  <input type="radio" id="b" name="salutation" value="Miss.">
+  <label for="Miss.">Miss.</label>
+  <input type="radio" id="c" name="salutation" value="Mrs.">
+  <label for="Mrs.">Mrs.</label>
+  <input type="radio" id="d" name="salutation" value="Dr.">
+  <label for="Dr.">Dr.</label><span id="sal"></span><br><br>	
+  
+    
+  <label for="fname">Name:</label>
+  <input type="text" id="fname" onfocus="na()" placeholder="Type" required><br><span id="n"></span><br><br>
+
+  <label for="user">UserName:</label>
+  <input list="usernames" id="user" placeholder="Type" onfocus="usr()" required> <br><span id="u"></span> <br><br>
+  <datalist id="usernames">
+    <option value="Archana">
+    <option value="Harshini">
+    <option value="Bargavi">
+  </datalist>
+  
+  <label for="pw">Password:</label>
+  <input type="password" id="pw" placeholder="Type" onfocus="password()" required><br><span id="p"></span><br><br>
+  
+  <label for="em">Email:</label>
+  <input type="email" id="em" placeholder="Type" onfocus="email()" required><br><span id="e"></span><br><br>
+  
+  <label for="dob">Date Of Birth:</label>
+  <input type="date" id="dob" onfocus="dt_b()" required><br><span id="birth"><br></span><br><br>
+
+  <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*" onfocus="sel_img()" required><br><span id="i"></span><br><br>
+
+  <fieldset>
+  <legend>Languages known:</legend><br>
+  <input type="checkbox" name="lk" value="eng">
+  <label for="1"> English</label>
+  <input type="checkbox" name="lk" value="hindi">
+  <label for="2"> Hindi</label>
+  <input type="checkbox" name="lk" value="Malayalam">
+  <label for="3"> Malayalam</label>
+  <input type="checkbox" name="lk" value="tamil">
+  <label for="4"> Tamil</label><br><br>
+  <input type="checkbox" name="lk" value="others">
+  <label for="5"> Others</label><br><br>
+  <label for="specifics">If others,specify:</label><br>
+  <input type="text" name="specifics"  ><br><span id="l"></span><br><br>
+  </fieldset>
+
+ <label for="exp"><br><br><br>Additional Expertise:</label>
+<textarea id="exp" rows="5" cols="70" onfocus="additional()" required></textarea><br><br>
+
+
+ <input type="submit" value="Register">&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Clear">
+
+ 
+</form> 
+</h3>
+</div>
+</body>
+</html>
+
+</body>

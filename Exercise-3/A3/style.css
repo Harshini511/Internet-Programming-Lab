@@ -1,0 +1,17 @@
+label:hover ,input:hover
+{
+background-color:lightgrey;
+}
+body
+{
+background-image: url('3.jpg');
+text-align: center;
+}
+h1
+{
+  text-align:center;
+}
+span
+{
+  color:red;
+}
