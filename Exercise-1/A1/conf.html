@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main</title>
+<style>
+body {text-align: center;
+	   margin-top: 50px;
+	   background-color: coral;
+	   color: black;
+	   
+	}
+
+h1{
+	text-align: center;
+	}
+img {
+  width: 50%;
+}
+  
+.tooltip {
+ position: relative;
+ display: inline-block;
+ border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+ visibility: hidden;
+ width: 120px;
+ background-color: #555;
+ color: #fff;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+ bottom: 125%;
+ left: 50%;
+ margin-left: -60px;
+ opacity: 0;
+ transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+ content: "";
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ margin-left: -5px;
+ border-width: 5px;
+ border-style: solid;
+ border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+ visibility: visible;
+ opacity: 1;
+}
+a:hover {
+ background-color: #ff9966;
+}
+
+</style>
+</head>
+
+
+
+<body >
+<h1>CONFERENCE</h1>
+<hr>
+<a href="C:\Users\Harshini\Desktop\ip1\home.html" target="blank" class="tooltip">Home<span class="tooltiptext">Home</span></a>
+<a href="C:\Users\Harshini\Desktop\ip1\committee.html" target="blank" class="tooltip">Committee<span class="tooltiptext">Committee</span></a>
+<a href="C:\Users\Harshini\Desktop\ip1\call.html" target="blank" class="tooltip">Call for papers<span class="tooltiptext">Call for papers</span></a>
+<a href="C:\Users\Harshini\Desktop\ip1\dates.html" target="blank" class="tooltip">Important Dates<span class="tooltiptext">Important dates</span></a>
+<a href="C:\Users\Harshini\Desktop\ip1\workshop.html" target="blank" class="tooltip">Workshop<span class="tooltiptext">Workshop</span></a>
+<a href="C:\Users\Harshini\Desktop\ip1\registration.html" target="blank" class="tooltip">Registration<span class="tooltiptext">Registration</span></a>
+<a href="C:\Users\Harshini\Desktop\ip1\contact.html" target="blank" class="tooltip">Contact<span class="tooltiptext">Contact</span></a>
+<hr>
+<img src="C:\Users\Harshini\Desktop\ip1\images.jpg" alt="CONFERENCE">
+</body>
+</html>
